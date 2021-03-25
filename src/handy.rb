@@ -52,10 +52,10 @@ def saveRead
 end
 
 def splashDisplay
-    puts "=======THE PLAINS========"
-    puts "===SPECIAL RUBY EDITION!==="
-    puts "==MADE BY DRAUMAZ IN 2021=="
-    puts "==CHARACTER BY BRYCE CANO=="
+    puts '==THE PLAINS=='
+    puts '==MADE BY DRAUMAZ IN 2021=='
+    puts '==WRITTEN IN RUBY=='
+    puts '==CHARACTER BY BRYCE CANO=='
     return
 end
 
@@ -65,7 +65,7 @@ def screenClear
 end
 
 def versionHeader
-    puts "\nThe Plains: Ruby Edition\n"
+    puts "\nThe Plains v0.23\n"
     return
 end
 
@@ -85,10 +85,10 @@ def invDisplay
     if var16 == 2 or var16 == 3 or var16 == 4
         flower = "0x FLOWER"
     end
-    if var15 == 1 and var7 = 0
+    if var15 == 1 and var7 = 1
         blade = "1x KNIFE (BLOODIED)"
     end
-    if var15 == 1
+    if var15 == 1 and var7 == 0
         blade = "1x KNIFE"
     end
     if var15 == 2

@@ -1,3 +1,6 @@
+require './handy'
+require './mm1'
+
 def cave
     begin
         screenClear
@@ -132,7 +135,8 @@ def caveSel3
         screenClear
         versionHeader
         invDisplay
-        puts "You focus your listening on the cave. You can hear a faint rumbling noise coming from within."
+        puts "\nYou focus your listening on the cave. You can hear a faint" 
+        puts "rumbling noise coming from within."
         puts "\nDISCERN [1]"
         puts "BACK [2]"
         print "\nACTION >> "
@@ -148,6 +152,10 @@ def caveSel3
             puts "Probably just nature."
             sleep(2)
             cave
+        end
+        if choose > 2 or choose < 1
+            inpErHandler
+            caveSel3
         end
     rescue ArgumentError
         inpErHandler
