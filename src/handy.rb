@@ -85,7 +85,7 @@ def invDisplay
     if var16 == 2 or var16 == 3 or var16 == 4
         flower = "0x FLOWER"
     end
-    if var15 == 1 and var7 = 1
+    if var15 == 1 and var7 == 1
         blade = "1x KNIFE (BLOODIED)"
     end
     if var15 == 1 and var7 == 0
