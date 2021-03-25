@@ -100,7 +100,6 @@ def invDisplay
 end
 
 def quitHandler
-    system("cls||clear")
     exit
 end
 
