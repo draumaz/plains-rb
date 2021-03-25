@@ -1,6 +1,7 @@
 require './handy'
 require './cave'
 require './hill'
+require './tool'
 
 def mainMenu1
     begin
@@ -14,7 +15,7 @@ def mainMenu1
         puts "You see hills, a cave, and strange flora all around you.\n\n"
         puts "HILL [1]"
         puts "CAVE [2]"
-        puts "T̶O̶O̶L̶ ̶[̶3̶]̶"
+        puts "TOOL [3]"
         puts "QUIT [4]"
         print "\nACTION >> "
         choose = Integer(gets.chomp)
@@ -25,8 +26,7 @@ def mainMenu1
             cave
         end
         if choose == 3
-            inpErHandler
-            mainMenu1
+            tool
         end
         if choose == 4
             quitHandler

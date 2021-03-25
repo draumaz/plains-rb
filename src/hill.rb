@@ -28,7 +28,7 @@ def hill
             puts "\nGO TOWARDS HIM [1]"
         end
         if var16 == 2
-            puts "\nYou can see the lizard sitting down, drinking a soda."
+            puts "You can see the lizard sitting down, drinking a soda."
             puts "\nVISIT HIM [1]"
         end
         if var12 == 1
@@ -50,7 +50,7 @@ def hill
         end
         if choose == 2
             if var1 == 0
-                #hillSel2
+                hillSel2
             end
             if var1 == 1
                 inpErHandler
@@ -58,7 +58,7 @@ def hill
             end
         end
         if choose == 3
-            #hillSel3
+            hillSel3
         end
         if choose == 4
             if var6 == 0
@@ -126,11 +126,11 @@ def hillSel1
                 hillSel1
             end
         end
-        if var6 != 2
+        if var6 != 2 and var16 != 2
             puts "\nThe huge reptilian sees you, and approaches."
         end
         if var16 == 2
-            puts "\nThe reptilian waves and smiles at you."
+            puts "\nThe reptilian smiles at you."
         end
         if var7 == 0
             puts ""
@@ -174,12 +174,31 @@ def hillSel1
                 sleep(5)
                 hill
             end
+            if var15 == 1 and var16 == 2
+                puts "\nI genuinely don't have the heart to program a scenario for this."
+                sleep(1)
+                puts "Sorry!! -draumaz"
+                sleep(1)
+                hillSel1
+            end
         end
         if choose == 2
             puts "two"
         end
         if choose == 3
-            puts "three"
+            if var16 == 0
+                puts "\nHe seems threatening... best to head back."
+                sleep(3)
+                hill
+            end
+            if var16 == 1
+                line_ext = 15
+                state_ext = 2
+                saveWrite(line_ext, state_ext)
+                puts "\nYou give the lizard the flower. He blushes at you."
+                sleep(4)
+                hillSel1
+            end
         end
         if choose == 4
             puts "four"
@@ -191,5 +210,112 @@ def hillSel1
     rescue ArgumentError
         inpErHandler
         hillSel1
+    end
+end
+
+def hillSel2
+    begin
+        var6 = saveRead[5]
+        screenClear
+        versionHeader
+        invDisplay
+        if var6 == 0
+            puts "\nDespite the massive mountains ahead, you decide to just keep still."
+            sleep(1)
+            puts "."
+            sleep(1)
+            puts "."
+            sleep(1)
+            puts "."
+            sleep(2)
+            puts "Seems like a waste of time."
+            puts "\nKEEP STANDING [1]"
+            puts "BACK [2]"
+            print "\nACTION >> "
+            choose = Integer(gets.chomp)
+            if choose == 1
+                line_ext = 0
+                state_ext = 1
+                saveWrite(line_ext, state_ext)
+                sleep(3)
+                puts "\nYou're completely zoned out."
+                sleep(2)
+                puts "You hear something and head back to the start."
+                sleep(3)
+                mainMenu1
+            end
+            if choose == 2
+                puts "You decide to return to a life of motion."
+                sleep(2)
+                hill()
+            end
+            if choose > 2 or choose < 1
+                inpErHandler
+                hillSel2
+            end
+        end
+        if var6 == 1
+            line_ext = 0
+            state_ext = 1
+            saveWrite(line_ext, state_ext)
+            sleep(4)
+            puts "\nYou've done something real bad, haven't you?"
+            sleep(2)
+            mainMenu1
+        end
+    rescue ArgumentError
+        inpErHandler
+        hillSel2
+    end
+end
+
+def hillSel3
+    begin
+        var16 = saveRead[15]
+        screenClear
+        versionHeader
+        invDisplay
+        puts "\nYou sit down on the warm grass and get a look around."
+        if var16 == 0
+            puts "There's a beautiful flower rooted right next to you."
+            puts "\nPICK [1]"
+        end
+        if var16 == 1
+            puts ""
+        end
+        puts "LAY DOWN [2]"
+        puts "BACK [3]"
+        print "\nACTION >> "
+        choose = Integer(gets.chomp)
+        if choose == 1
+            if var16 == 1 or var16 == 2
+                inpErHandler
+                hillSel3
+            end
+            if var16 == 0
+                line_ext = 15
+                state_ext = 1
+                saveWrite(line_ext, state_ext)
+                puts "\nThe flower comes off the root without hesistation."
+                puts "You put it in your pocket."
+                sleep(2)
+                hill
+            end
+        end
+        if choose == 2
+            puts "Laying here is truly refreshing. But you have work to do..."
+            sleep(4)
+            hill
+        end
+        if choose == 3
+            hill
+        end
+        if choose > 3 or choose < 1
+            inpErHandler
+            hillSel3
+        end
+    rescue ArgumentError
+        inpErHandler
+        hillSel3
     end
 end

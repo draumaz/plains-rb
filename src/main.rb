@@ -1,5 +1,6 @@
 require './handy'
 require './mm1'
+require './rst'
 
 def fileEnsure
         begin
@@ -31,7 +32,8 @@ def choose
                         mainMenu1
                 end
                 if choose == 2
-                        quitHandler
+                        reset
+                        chLoopback
                 end
                 if choose > 2 or choose < 1
                         inpErHandler

@@ -52,9 +52,9 @@ def saveRead
 end
 
 def splashDisplay
-    puts '==THE PLAINS=='
+    puts '==THE PLAINS==============='
     puts '==MADE BY DRAUMAZ IN 2021=='
-    puts '==WRITTEN IN RUBY=='
+    puts '==SPECIAL RUBY EDITION!===='
     puts '==CHARACTER BY BRYCE CANO=='
     return
 end
@@ -107,5 +107,28 @@ end
 def inpErHandler
     puts "\nDid you mean something else?"
     sleep(0.5)
+    return
+end
+
+def easterEgg
+    puts "                   .-') _    ('-. .-.   ('-.                  "
+    puts "                  (  OO) )  ( OO )  / _(  OO)                 "
+    puts "                  /     '._ ,--. ,--.(,------.                "
+    puts "                  |'--...__)|  | |  | |  .---'                "
+    puts "                  '--.  .--'|   .|  | |  |                    "
+    puts "                     |  |   |       |(|  '--.                 "
+    puts "                     |  |   |  .-.  | |  .--'                 "
+    puts "                     |  |   |  | |  | |  `---.                "
+    puts "                     `--'   `--' `--' `------'                "
+    puts "   _ (`-.              ('-.                  .-') _   .-')    "
+    puts "  ( (OO  )            ( OO ).-.             ( OO ) ) ( OO ).  "
+    puts " _.`     \ ,--.       / . --. /  ,-.-') ,--./ ,--,' (_)---\_) "
+    puts "(__...--'' |  |.-')   | \-.  \   |  |OO)|   \ |  |\ /    _ |  "
+    puts " |  /  | | |  | OO ).-'-'  |  |  |  |  \|    \|  | )\  :` `.  "
+    puts " |  |_.' | |  |`-' | \| |_.'  |  |  |(_/|  .     |/  '..`''.) "
+    puts " |  .___.'(|  '---.'  |  .-.  | ,|  |_.'|  |\    |  .-._)   \ "
+    puts " |  |      |      |   |  | |  |(_|  |   |  | \   |  \       / "
+    puts " `--'      `------'   `--' `--'  `--'   `--'  `--'   `-----'  "
+    sleep(4)
     return
 end
