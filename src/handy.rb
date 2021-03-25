@@ -88,6 +88,9 @@ def invDisplay
     if var15 == 1 and var7 = 0
         blade = "1x KNIFE (BLOODIED)"
     end
+    if var15 == 1
+        blade = "1x KNIFE"
+    end
     if var15 == 2
         blade = "0x KNIFE"
     end

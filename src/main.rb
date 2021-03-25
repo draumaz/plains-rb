@@ -33,7 +33,7 @@ def choose
                 if choose == 2
                         quitHandler
                 end
-                if choose != 1 or 2
+                if choose > 2 or choose < 1
                         inpErHandler
                         chLoopback
                 end
