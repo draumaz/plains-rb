@@ -1,4 +1,4 @@
 # The Plains: Ruby Edition
-An official port of [The Plains](https://github.com/draumaz/plains) into Ruby.
+The official rewrite of [The Plains](https://github.com/draumaz/plains) into Ruby. 
 
-Development may be slow, as I am teaching myself Ruby as I write.
+Codebase will be merged with main once it has reached feature parity.
