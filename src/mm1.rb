@@ -2,6 +2,7 @@ require './handy'
 require './cave'
 require './hill'
 require './tool'
+require './mm2'
 
 def mainMenu1
     begin
@@ -80,7 +81,7 @@ def mainMenu1End
             sleep(2)
             puts "Your friends slowly walk out."
             sleep(2)
-            
+            mainMenu2
         end
         if choose == 2
             mainMenu1

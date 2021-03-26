@@ -54,7 +54,7 @@ end
 def splashDisplay
     puts '==THE PLAINS==============='
     puts '==MADE BY DRAUMAZ IN 2021=='
-    puts '==SPECIAL RUBY EDITION!===='
+    puts '==MADE IN RUBY!============'
     puts '==CHARACTER BY BRYCE CANO=='
     return
 end

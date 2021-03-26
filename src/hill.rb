@@ -229,6 +229,7 @@ def hillSel2
             puts "."
             sleep(2)
             puts "Seems like a waste of time."
+            sleep(1)
             puts "\nKEEP STANDING [1]"
             puts "BACK [2]"
             print "\nACTION >> "
@@ -240,6 +241,8 @@ def hillSel2
                 sleep(3)
                 puts "\nYou're completely zoned out."
                 sleep(2)
+                puts "...but..."
+                sleep(1)
                 puts "You hear something and head back to the start."
                 sleep(3)
                 mainMenu1

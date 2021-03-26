@@ -26,7 +26,12 @@ def choose
                 var9 = saveRead[8]
                 var10 = saveRead[9]
                 var14 = saveRead[13]
-                puts "\nPLAY [1]"
+                if var14 != 2
+                        puts "\nPLAY [1]"
+                end
+                if var14 == 2
+                        puts "\nPLAY [1] ★"
+                end
                 puts "RESET [2]"
                 print "\nACTION >> "
                 choose = Integer(gets.chomp)
@@ -34,10 +39,15 @@ def choose
                         if var2 == 0
                                 mainMenu1
                         end
-                        if var2 == 1
+                        if var2 == 1 and var14 != 2
                                 mainMenu2
                         end
-                        if var2 > 1 or var2 < 0
+                        if var2 == 1 and var14 == 2
+                                puts "\nNot currently implemented"
+                                puts ""
+                                quitHandler
+                        end
+                        if var2 > 2 or var2 < 0
                                 puts "\nDirty hacker..."
                                 sleep(10)
                         end
